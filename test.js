@@ -90,3 +90,17 @@ Test('neighbors', function(t) {
 
   t.end();
 });
+
+Test('region', function(t) {
+  var grid = new hexgrid.HexGrid(hexgrid.Orientation.FLAT, new hexgrid.Point(10, 20), new hexgrid.Point(20, 10), new Morton64(2, 32));
+  var geometry = [new hexgrid.Point(20, 19.99999), new hexgrid.Point(20, 40), new hexgrid.Point(40, 60),
+                  new hexgrid.Point(60, 40), new hexgrid.Point(50, 30), new hexgrid.Point(40, 40)];
+  var region = grid.createRegion(geometry);
+  var hexes = region.getHexes();
+  var expectedHexCodes = ["0", "2", "1", "3", "9", "4"];
+  for (var i = 0; i < hexes.length; i++) {
+    t.equals(grid.hexToCode(hexes[i]), expectedHexCodes[i]);
+  }
+
+  t.end();
+});

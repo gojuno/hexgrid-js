@@ -11,6 +11,7 @@
            var Point = require("./point.js");
            var Hex = require("./hex.js");
            var FractionalHex = require("./fractional_hex.js");
+           var Region = require("./region.js");
 
            function HexGrid(orientation, origin, size, mort) {
              this.orientation = orientation;
@@ -66,6 +67,10 @@
                }
              }
              return neighbors;
+           }
+
+           HexGrid.prototype.createRegion = function(geometry) {
+             return new Region(this, geometry);
            }
 
            return HexGrid;
