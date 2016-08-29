@@ -1,0 +1,17 @@
+* HexGrid
+** Basics
+Configurable hex grid on abstract surface.
+** Examples
+#+BEGIN_SRC js
+var hexgrid = require("hexgrid");
+var Morton64 = require("morton");
+
+var grid = new hexgrid.HexGrid(hexgrid.Orientation.FLAT, new hexgrid.Point(0, 0), new hexgrid.Point(20, 10), new Morton64(2, 32));
+var hex = grid.hexAt(new hexgrid.Point(50, 50));
+var code = grid.hexToCode(hex);
+var restoredHex = grid.hexFromCode(code);
+var neighbors = grid.hexNeighbors(hex, 2);
+var region = grid.createRegion([new hexgrid.Point(0, 0), new hexgrid.Point(0, 10),
+                                new hexgrid.Point(10, 10), new hexgrid.Point(10, 0)]);
+var hexesInRegion = region.getHexes();
+#+END_SRC
