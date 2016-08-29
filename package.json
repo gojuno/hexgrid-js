@@ -1,0 +1,26 @@
+{
+    "name": "hexgrid",
+    "version": "1.0.0",
+    "description": "HexGrid",
+    "main": "index.js",
+    "scripts": {
+        "test": "node test"
+    },
+    "repository": {
+      "type": "git",
+        "url": "git+ssh://git@github.com/gojuno/hexgrid-js.git"
+    },
+    "author": "Andrew Kirilenko <iced@gojuno.com>",
+    "license": "BSD-3-Clause",
+    "bugs": {
+        "url": "https://github.com/gojuno/hexgrid-js/issues"
+    },
+    "homepage": "https://github.com/gojuno/hexgrid-js#readme",
+    "dependencies": {
+        "morton": "^1.*",
+        "long": "^3.*"
+    },
+    "devDependencies": {
+        "tape": "^4.*"
+    }
+}
