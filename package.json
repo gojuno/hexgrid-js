@@ -1,6 +1,6 @@
 {
   "name": " hexgrid-abstract",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "HexGrid",
   "keywords": [
     "grid",
@@ -13,7 +13,7 @@
   "license": "BSD-3-Clause",
   "bugs": "https://github.com/gojuno/hexgrid-js/issues",
   "homepage": "https://github.com/gojuno/hexgrid-js#readme",
-  "main": "hexgrid.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/gojuno/hexgrid-js.git"
@@ -23,7 +23,7 @@
     "build.output": "./node_modules/webpack/bin/webpack.js ./src/hexgrid.js ./package/dist/hexgrid.js",
     "build.min": "./node_modules/webpack/bin/webpack.js ./src/hexgrid.js ./package/dist/hexgrid.min.js --optimize-minimize",
     "build": "node test & make copy & npm run build.output & npm run build.min",
-    "publish": "npm run publish package",
+    "publish": "npm publish package",
     "clean": "rm -rf package"
   },
   "dependencies": {

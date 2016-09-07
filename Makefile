@@ -1,4 +1,3 @@
-MINIFY ?= ./node_modules/uglify-js/bin/uglifyjs
 FILES = \
 	src/hexgrid.js \
 	src/hex.js \
@@ -7,6 +6,7 @@ FILES = \
 	src/orientation.js \
 	src/point.js \
 	src/region.js \
+	index.js \
 	package.json \
 	LICENSE \
 	README.md
