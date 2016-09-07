@@ -4,7 +4,7 @@ Configurable hex grid on abstract surface.
 ##ES5
 ```js
 var Morton64 = require("morton64"),
-  Hexgrid = require("hexgrid-abstract"),
+  HexGrid = require("hexgrid-abstract").HexGrid,
   Point = require("hexgrid-abstract/point"),
   Orientation = require("hexgrid-abstract/orientation");
   
